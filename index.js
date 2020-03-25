@@ -8,9 +8,11 @@ function takeANumber(katzDeliLine, name) {
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "There is nobody waiting to be served!"
-  } else {
+  } else    {
+console.log("*=", katzDeliLine.shift())
     return "Currently serving " + katzDeliLine.shift() + ".";
     }
+
 }
 
 function currentLine(katzDeliLine) {
@@ -22,6 +24,7 @@ function currentLine(katzDeliLine) {
     line += (i+1) + ". " + katzDeliLine[i] + ", ";
     }
     line = line.slice(0, - 2);
+    console.log(line);
     return "The line is currently: " + line
   }
 }
